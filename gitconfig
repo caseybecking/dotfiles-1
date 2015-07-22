@@ -77,7 +77,7 @@
 	keepBackup = false
 
 [push]
-	default = upstream
+	default = current
 
 [credential]
 	helper = cache --timeout=3600
@@ -89,8 +89,17 @@
 	detachedHead = false
 
 [core]
-	excludesfile = ~/.gitignore_global
+	excludesfile = /Users/caseybecking/.gitignore_global
 
 # Allow local customizations in the .gitconfig_local file
 [include]
 	path = ~/.gitconfig_local
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.0.5.2/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = Casey Becking
+	email = caseybecking@gmail.com

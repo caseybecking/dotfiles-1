@@ -1,3 +1,6 @@
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 # Initialize completion
 autoload -Uz compinit && compinit
 
@@ -22,7 +25,7 @@ setopt extendedhistory
 KEYTIMEOUT=1 # corresponds to 10ms
 
 # Use vim as the editor
-export EDITOR=vim
+export EDITOR=vi
 
 # Use vim style line editing in zsh
 bindkey -v
